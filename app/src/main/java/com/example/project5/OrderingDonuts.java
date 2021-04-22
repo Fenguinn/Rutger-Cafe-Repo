@@ -49,14 +49,12 @@ public class OrderingDonuts extends AppCompatActivity {
     private Button addToListButton;
     private Button removeFromListButton;
 
-    /**
-     * This function is called automatically and initializes the elements of the activity.
-     */
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ordering_donuts);
-        this.setTitle("Order Donuts");
+        this.setTitle(R.string.Order_Donuts);
         myDonuts = new ArrayList<Donut>();
         myListStrings = new ArrayList<String>();
         subtotalTextViewDonuts = (TextView) findViewById(R.id.subtotalTextViewDonuts);
@@ -109,6 +107,7 @@ public class OrderingDonuts extends AppCompatActivity {
         myDonuts.add(myDonut);
         update();
     }
+
     /**
      * This function is called when the cancel order button is clicked. It removes the selected order from the list.
      */
@@ -118,7 +117,7 @@ public class OrderingDonuts extends AppCompatActivity {
             this.update();
         } catch (Exception e) {
             int duration = Toast.LENGTH_SHORT;
-            Toast toast = Toast.makeText(this, "Please select something to remove" , duration);
+            Toast toast = Toast.makeText(this, R.string.empty_remove_warning , duration);
             toast.show();
         }
     }
@@ -128,13 +127,13 @@ public class OrderingDonuts extends AppCompatActivity {
     public void addToOrder(View view) {
         if (myDonuts.isEmpty()) {
             int duration = Toast.LENGTH_SHORT;
-            Toast toast = Toast.makeText(this, "Please pick a donut!" , duration);
+            Toast toast = Toast.makeText(this, R.string.Empty_add_warning, duration);
             toast.show();
             return;
         }
 
         int duration = Toast.LENGTH_SHORT;
-        Toast toast = Toast.makeText(this, "Donut(s) have been added to Order" , duration);
+        Toast toast = Toast.makeText(this, R.string.Donut_confirm , duration);
         toast.show();
 
 

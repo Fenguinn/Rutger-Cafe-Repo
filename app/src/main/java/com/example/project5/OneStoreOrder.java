@@ -4,6 +4,11 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/**
+ * This class provides the functionality of managing multiple orders as well as other features.
+ * @author Abdullah Salem, Gent Blaku
+ *
+ */
 public class OneStoreOrder implements Customizable{
     private ArrayList<Order> storeOrdersList;
 
@@ -60,7 +65,7 @@ public class OneStoreOrder implements Customizable{
 
     /**
      * This function removes an object from the list, if it is in the list.
-     * @param removeIndex is an object that is being removed from the list
+     * @param removeIndex is the index that is being removed from the list
      * @return true if an object is removed, false if otherwise.
      */
     public boolean remove(int removeIndex) {
@@ -85,22 +90,6 @@ public class OneStoreOrder implements Customizable{
             currString = currString + this.storeOrdersList.get(i).toString() + "\n";
         }
         return currString;
-    }
-
-
-    /**
-     * This function exports all the orders in the list as a txt file/
-     */
-    public void exportDatabase() {
-        try {
-            FileWriter writer = new FileWriter("storeOrders.txt");
-            writer.write(this.toString());
-            writer.close();
-        }
-
-        catch(IOException e){
-
-        }
     }
 
 }

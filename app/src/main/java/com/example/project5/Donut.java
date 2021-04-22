@@ -1,5 +1,10 @@
 package com.example.project5;
 
+/**
+ * This class holds properties of the Donut object, such as flavor, quantity.
+ * @author Abdullah Salem, Gent Blaku
+ *
+ */
 public class Donut extends MenuItem{
 
     enum AllFlavors { JELLYFILLED, BOSTONKREME, STRAWBERRYLEMONSWIRL, MAPLEFROSTED, BLUEBERRYCAKE, ICECREAMCAKE,CHOCOLOCO, GLAZED, BERRYBEAUTIFUL  }

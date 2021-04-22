@@ -2,6 +2,11 @@ package com.example.project5;
 
 import java.util.ArrayList;
 
+/**
+ * This class provides the functionality of an Order, that may or may not be made up of multiple or singular instances of the MenuItem class
+ * @author Abdullah Salem, Gent Blaku
+ *
+ */
 public class Order implements Customizable{
     private final static double NJTAX = .06625;
 
@@ -128,9 +133,16 @@ public class Order implements Customizable{
 
         return false;
     }
+
+    /**
+     * Removes an item from the list at the position of index position
+     * @param position is the index
+     * @return true if item was removed, else otherwise
+     */
     public boolean remove(int position) {
         if (position <= items.size()) {
             items.remove(position);
+            return true;
         }
        return false;
     }

@@ -38,7 +38,7 @@ public class OrderingCoffee extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ordering_coffee);
-        this.setTitle("Order Coffee");
+        this.setTitle(R.string.Order_Coffee);
         myCoffee = new Coffee();
 
         milk = (CheckBox)findViewById(R.id.milkBox);
@@ -66,11 +66,18 @@ public class OrderingCoffee extends AppCompatActivity {
         update();
     }
 
+    /**
+     * This helper method updates the current page to match any changes made by the user.
+     */
     private void update() {
         double total = myCoffee.itemPrice();
         running_total.setText(myCoffee.formatPrice(total));
     }
 
+    /**
+     * This function is called when the milk option is selected, it adds milk to the Coffee Object.
+     * @param view is the current view.
+     */
     public void handleMilk(View view){
         if (milk.isChecked())
             myCoffee.add("Milk");
@@ -79,7 +86,10 @@ public class OrderingCoffee extends AppCompatActivity {
         update();
     }
 
-
+    /**
+     * This function is called when the Cream option is selected, it adds Cream to the Coffee Object.
+     * @param view is the current view.
+     */
     public void handleCream(View view){
         if (cream.isChecked())
             myCoffee.add("Cream");
@@ -89,6 +99,10 @@ public class OrderingCoffee extends AppCompatActivity {
     }
 
 
+    /**
+     * This function is called when the Syrup option is selected, it adds Syrup to the Coffee Object.
+     * @param view is the current view.
+     */
     public void handleSyrup(View view){
         if (syrup.isChecked())
             myCoffee.add("Syrup");
@@ -96,6 +110,11 @@ public class OrderingCoffee extends AppCompatActivity {
             myCoffee.remove("Syrup");
         update();
     }
+
+    /**
+     * This function is called when the caramel option is selected, it adds caramel to the Coffee Object.
+     * @param view is the current view.
+     */
     public void handleCaramel(View view){
         if (caramel.isChecked())
             myCoffee.add("Caramel");
@@ -103,6 +122,11 @@ public class OrderingCoffee extends AppCompatActivity {
             myCoffee.remove("Caramel");
         update();
     }
+
+    /**
+     * This function is called when the whipped cream  option is selected, it adds whipped cream to the Coffee Object.
+     * @param view is the current view.
+     */
     public void handleWhippedCream(View view){
         if (whipped_cream.isChecked())
             myCoffee.add("Whipped Cream");
@@ -111,10 +135,14 @@ public class OrderingCoffee extends AppCompatActivity {
         update();
     }
 
+    /**
+     * This function is called when user clicks Add to Order, it adds a Coffee Object to the current Order
+     * @param view is the current view
+     */
     public void addToOrder(View view) {
 
         int duration = Toast.LENGTH_SHORT;
-        Toast toast = Toast.makeText(this, "Coffee has been added to Order" , duration);
+        Toast toast = Toast.makeText(this, R.string.coffee_confirm , duration);
         toast.show();
 
 

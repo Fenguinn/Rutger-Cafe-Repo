@@ -36,30 +36,35 @@ public class OrderDetails extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_order_details);
-        this.setTitle("Order Details");
-        subtotalTextView = (TextView)findViewById(R.id.subtotalTextView);
-        salesTaxTextView = (TextView)findViewById(R.id.taxTextView);
-        totalTextView    = (TextView)findViewById(R.id.totalTextView);
-        currentOrderList = (ListView)findViewById(R.id.orderListView);
-        removeFromOrderButton = (Button)findViewById(R.id.removeItemButton);
-        placeOrderButton      = (Button)findViewById(R.id.placeOrderButton);
-        orderArrayListStrings = new ArrayList<String>();
+        try{
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_order_details);
+            this.setTitle(R.string.Order_Details);
+            subtotalTextView = (TextView)findViewById(R.id.subtotalTextView);
+            salesTaxTextView = (TextView)findViewById(R.id.taxTextView);
+            totalTextView    = (TextView)findViewById(R.id.totalTextView);
+            currentOrderList = (ListView)findViewById(R.id.orderListView);
+            removeFromOrderButton = (Button)findViewById(R.id.removeItemButton);
+            placeOrderButton      = (Button)findViewById(R.id.placeOrderButton);
+            orderArrayListStrings = new ArrayList<String>();
 
 
-        arrayAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, orderArrayListStrings );
-        currentOrderList.setAdapter(arrayAdapter);
+            arrayAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, orderArrayListStrings );
+            currentOrderList.setAdapter(arrayAdapter);
 
-        currentOrderList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapter, View v, int position, long arg3) {
-                positionBadOrder = position;
-            }
-        });
+            currentOrderList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> adapter, View v, int position, long arg3) {
+                    positionBadOrder = position;
+                }
+            });
 
 
-        update();
+            update();
+        }catch (Exception e){
+
+        }
+
     }
 
 
@@ -93,7 +98,7 @@ public class OrderDetails extends AppCompatActivity {
             update();
         }catch (Exception e) {
             int duration = Toast.LENGTH_SHORT;
-            Toast toast = Toast.makeText(this, "Please select something to remove", duration);
+            Toast toast = Toast.makeText(this, R.string.empty_remove_warning, duration);
             toast.show();
         }
 
@@ -107,7 +112,7 @@ public class OrderDetails extends AppCompatActivity {
     public void placeMyOrder(View view) {
         if (MainActivity.myOrder.isEmpty()) {
             int duration = Toast.LENGTH_SHORT;
-            Toast toast = Toast.makeText(this, "You have an empty order. Please select some donuts and coffee :)" , duration);
+            Toast toast = Toast.makeText(this, R.string.empty_order_warning, duration);
             toast.show();
             return;
         }
@@ -116,7 +121,7 @@ public class OrderDetails extends AppCompatActivity {
 
         if (MainActivity.myOrder != null) {
             int duration = Toast.LENGTH_SHORT;
-            Toast toast = Toast.makeText(this, "Order has been placed." , duration);
+            Toast toast = Toast.makeText(this, R.string.order_confirmation , duration);
             toast.show();
 
             MainActivity.myStore.add(MainActivity.myOrder);

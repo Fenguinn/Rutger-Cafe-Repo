@@ -2,6 +2,7 @@ package com.example.project5;
 
 
 import java.text.DecimalFormat;
+
 /**
  * This class holds the properties of an Object representing a Menu Item, such as Coffee or Donuts.
  * @author Abdullah Salem, Gent Blaku
@@ -76,6 +77,7 @@ public class MenuItem {
     public void incrementQuantity(int number) {
         this.quantity += number;
     }
+
     /**
      * This uses the DecimalFormat class to format into dollar format.
      * @param price the price to be formatted

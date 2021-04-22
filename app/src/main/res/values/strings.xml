@@ -19,6 +19,23 @@
     <string name="arrow_right"><![CDATA[->]]></string>
     <string name="arrow_left"><![CDATA[<-]]></string>
     <string name="Donut_description">Some donuts</string>
+    <string name="Main_Menu">Main Menu</string>
+    <string name="Order_Details">Order Details</string>
+    <string name="Order_Coffee">Order Coffee</string>
+    <string name="Order_Donuts">Order Donuts</string>
+    <string name="Store_Orders">Store Orders</string>
+
+
+    <string name="new_line">\n</string>
+    <string name="blank"></string>
+
+    <string name="empty_remove_warning">Please select something to remove.</string>
+    <string name="empty_order_warning">You have an empty order. Please select some donuts and coffee :)</string>
+    <string name="order_confirmation">Order has been placed.</string>
+    <string name="coffee_confirm">Coffee has been added to Order.</string>
+    <string name="Empty_add_warning">Please select something to add.</string>
+    <string name="Donut_confirm">Donut(s) have been added to Order.</string>
+    <string name="cancelled_order">Cancelled Order</string>
 
 
     <string-array name="Coffee_Sizes">

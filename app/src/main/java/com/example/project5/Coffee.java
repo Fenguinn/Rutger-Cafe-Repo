@@ -1,5 +1,10 @@
 package com.example.project5;
 
+/**
+ * This class holds properties of Coffee objects like add-ins, size
+ * @author Abdullah Salem, Gent Blaku
+ *
+ */
 public class Coffee extends MenuItem{
     private static final double COFFEE_PRICE_DEFAULT = 1.49; // the price of a small coffee - 50 cents
     private static final double  PRICE_PER_ADD_IN= 0.20;

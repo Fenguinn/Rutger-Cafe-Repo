@@ -26,14 +26,12 @@ public class StoreOrders extends AppCompatActivity {
     private int positionBadStoreOrder;
 
 
-    /**
-     * This function is called automatically and initializes the elements of the activity.
-     */
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_store_orders);
-        this.setTitle("Store Orders");
+        this.setTitle(R.string.Store_Orders);
 
         allTheStoreOrdersList = new ArrayList<String>();
         StoreOrdersList = (ListView)findViewById(R.id.StoreOrdersList);
@@ -52,6 +50,7 @@ public class StoreOrders extends AppCompatActivity {
 
         this.update();
     }
+
     /**
      * This is a helper function that is called several times through out the class. It changes the page to match any changes made by the user.
      */
@@ -83,9 +82,12 @@ public class StoreOrders extends AppCompatActivity {
             this.allTheStoreOrdersList.remove(positionBadStoreOrder);
             MainActivity.myStore.remove(positionBadStoreOrder);
             this.update();
+            int duration = Toast.LENGTH_SHORT;
+            Toast toast = Toast.makeText(this, R.string.cancelled_order , duration);
+            toast.show();
         } catch (Exception e) {
             int duration = Toast.LENGTH_SHORT;
-            Toast toast = Toast.makeText(this, "Please select something to remove" , duration);
+            Toast toast = Toast.makeText(this, R.string.empty_remove_warning , duration);
             toast.show();
         }
 

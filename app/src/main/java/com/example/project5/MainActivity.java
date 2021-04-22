@@ -29,40 +29,73 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        this.setTitle("Main Menu");
+        this.setTitle(R.string.Main_Menu);
         donutImageButton = (ImageButton) findViewById(R.id.mmDonutImage);
         donutImageButton.setOnClickListener(new View.OnClickListener() {
+            /**
+             * This triggers on the click of the donut image-button
+             * @param v is the current view
+             */
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, OrderingDonuts.class);
-                startActivity(i);
+                try{
+                    Intent i = new Intent(MainActivity.this, OrderingDonuts.class);
+                    startActivity(i);
+                } catch (Exception e){
+
+                }
             }
         });
 
         coffeeImageButton = (ImageButton) findViewById(R.id.mmCoffeeImage);
         coffeeImageButton.setOnClickListener(new View.OnClickListener() {
+            /**
+             * This triggers on the click of the coffee image-button
+             * @param v is the current view
+             */
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, OrderingCoffee.class);
-                startActivity(i);
+                try{
+                    Intent i = new Intent(MainActivity.this, OrderingCoffee.class);
+                    startActivity(i);
+                } catch (Exception e){
+
+                }
             }
         });
 
         orderDetailsImageButton = (ImageButton) findViewById(R.id.mmOrderImage);
         orderDetailsImageButton.setOnClickListener(new View.OnClickListener() {
+            /**
+             * This triggers on the click of the shopping cart image-button
+             * @param v is the current view
+             */
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, OrderDetails.class);
-                startActivity(i);
+                try{
+                    Intent i = new Intent(MainActivity.this, OrderDetails.class);
+                    startActivity(i);
+                } catch (Exception e){
+
+                }
             }
         });
 
         storeOrdersImageButton = (ImageButton) findViewById(R.id.mmStoreOrderImage);
         storeOrdersImageButton.setOnClickListener(new View.OnClickListener() {
+            /**
+             * This triggers on the click of the list and shopping-cart image-button
+             * @param v is the current view
+             */
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, StoreOrders.class);
-                startActivity(i);
+                try{
+                    Intent i = new Intent(MainActivity.this, StoreOrders.class);
+                    startActivity(i);
+                } catch (Exception e){
+
+                }
+
             }
         });
 

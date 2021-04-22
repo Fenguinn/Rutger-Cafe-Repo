@@ -16,7 +16,6 @@
         android:text="@string/store_orders"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="#784BE4"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
