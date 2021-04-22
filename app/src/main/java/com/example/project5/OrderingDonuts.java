@@ -13,14 +13,14 @@ public class OrderingDonuts extends AppCompatActivity {
         setContentView(R.layout.activity_ordering_donuts);
     }
 
-
-    public void onItemSelected(AdapterView<?> parent, View view,
-                               int pos, long id) {
-        // An item was selected. You can retrieve the selected item using
-        // parent.getItemAtPosition(pos)
-    }
-
-    public void onNothingSelected(AdapterView<?> parent) {
-        // Another interface callback
-    }
+//
+//    public void onItemSelected(AdapterView<?> parent, View view,
+//                               int pos, long id) {
+//        // An item was selected. You can retrieve the selected item using
+//        // parent.getItemAtPosition(pos)
+//    }
+//
+//    public void onNothingSelected(AdapterView<?> parent) {
+//        // Another interface callback
+//    }
 }

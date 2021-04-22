@@ -4,35 +4,55 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#00BCD4"
     tools:context=".OrderingDonuts">
 
     <ImageView
         android:id="@+id/donutImageView"
         android:layout_width="370dp"
         android:layout_height="227dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="436dp"
         android:scaleX="1.5"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@mipmap/orderDonutImage"
-        tools:layout_editor_absoluteY="68dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/orderDonutImage" />
 
     <Spinner
         android:id="@+id/flavorSpinner"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="460dp"
         android:entries="@array/donutFlavorArray"
         android:scaleX="1"
         android:scaleY="1.5"
         android:translationX="75"
-        tools:layout_editor_absoluteX="-25dp"
-        tools:layout_editor_absoluteY="504dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="1dp" />
 
     <Spinner
         android:id="@+id/numDonutSpinner"
         android:layout_width="75"
         android:layout_height="wrap_content"
+        android:layout_marginStart="176dp"
+        android:layout_marginLeft="176dp"
         android:entries="@array/numDonutArray"
         android:translationX="135"
-        tools:layout_editor_absoluteX="136dp"
-        tools:layout_editor_absoluteY="507dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="460dp" />
+
+    <Button
+        android:id="@+id/donutAddToOrderButton"
+        android:layout_width="195dp"
+        android:layout_height="57dp"
+        android:text="@string/add_to_order"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="637dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
