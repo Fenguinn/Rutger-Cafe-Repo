@@ -128,6 +128,12 @@ public class Order implements Customizable{
 
         return false;
     }
+    public boolean remove(int position) {
+        if (position <= items.size()) {
+            items.remove(position);
+        }
+       return false;
+    }
 
     /**
      * Compares this instance of the class to another object.

@@ -45,6 +45,7 @@ public class OrderDetails extends AppCompatActivity {
         currentOrderList = (ListView)findViewById(R.id.orderListView);
         removeFromOrderButton = (Button)findViewById(R.id.removeItemButton);
         placeOrderButton      = (Button)findViewById(R.id.placeOrderButton);
+        orderArrayListStrings = new ArrayList<String>();
 
 
         arrayAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, orderArrayListStrings );
@@ -74,6 +75,9 @@ public class OrderDetails extends AppCompatActivity {
            orderArrayListStrings.add(tokens.nextToken());
         }
 
+        arrayAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, orderArrayListStrings );
+        currentOrderList.setAdapter(arrayAdapter);
+
         subtotalTextView.setText(""+MainActivity.myOrder.getSubtotal());
         salesTaxTextView.setText(""+MainActivity.myOrder.getSalesTax());
         totalTextView.setText(""+MainActivity.myOrder.getTotal());
@@ -83,8 +87,17 @@ public class OrderDetails extends AppCompatActivity {
      * This method removes an Object from the current order
      */
     public void removeItem(View view) {
-        MainActivity.myOrder.remove(positionBadOrder);
-        update();
+        try{
+            orderArrayListStrings.remove(positionBadOrder);
+            MainActivity.myOrder.remove(positionBadOrder);
+            update();
+        }catch (Exception e) {
+            int duration = Toast.LENGTH_SHORT;
+            Toast toast = Toast.makeText(this, "Please select something to remove", duration);
+            toast.show();
+        }
+
+
     }
 
 

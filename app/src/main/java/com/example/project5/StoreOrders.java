@@ -35,6 +35,7 @@ public class StoreOrders extends AppCompatActivity {
         setContentView(R.layout.activity_store_orders);
         this.setTitle("Store Orders");
 
+        allTheStoreOrdersList = new ArrayList<String>();
         StoreOrdersList = (ListView)findViewById(R.id.StoreOrdersList);
         cancelOrderbutton = (Button)findViewById(R.id.CancelOrderButton);
 
@@ -60,11 +61,15 @@ public class StoreOrders extends AppCompatActivity {
 
         for (int i=0; i<MainActivity.myStore.getSize(); i++){
             MainActivity.myStore.getOrder(i).calculatePayment();
-            allTheStoreOrdersList.add("Order #" + i + "\n"
+            allTheStoreOrdersList.add("Order #" + (i+ONE) + "\n"
                                         +MainActivity.myStore.getOrder(i).toString() +
-                                        "\nOrder total: " + MainActivity.myStore.getOrder(i).getTotal() +" " +
-                    "                   (subtotal: " + MainActivity.myStore.getOrder(i).getSubtotal() +", tax: " + MainActivity.myStore.getOrder(i).getSalesTax()  );
+                                        "Order total: " + MainActivity.myStore.getOrder(i).getTotal() +" " +
+                                        "(subtotal: " + MainActivity.myStore.getOrder(i).getSubtotal() +", tax: " + MainActivity.myStore.getOrder(i).getSalesTax() +")" );
         }
+
+        arrayAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, allTheStoreOrdersList );
+        StoreOrdersList.setAdapter(arrayAdapter);
+
     }
 
 

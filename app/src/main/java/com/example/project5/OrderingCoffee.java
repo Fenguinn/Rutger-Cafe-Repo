@@ -120,11 +120,12 @@ public class OrderingCoffee extends AppCompatActivity {
 
         //RunningTotal.setText("gent1");
         MainActivity.myOrder.add(myCoffee);
-        cream.setSelected(false);
-        milk.setSelected(false);
-        caramel.setSelected(false);
-        whipped_cream.setSelected(false);
-        syrup.setSelected(false);
+        cream.setChecked(false);
+        cream.setChecked(false);
+        milk.setChecked(false);
+        caramel.setChecked(false);
+        whipped_cream.setChecked(false);
+        syrup.setChecked(false);
 
         myCoffee = new Coffee();
 

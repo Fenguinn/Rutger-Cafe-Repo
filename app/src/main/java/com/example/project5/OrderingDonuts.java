@@ -74,6 +74,8 @@ public class OrderingDonuts extends AppCompatActivity {
                 positionBadDonut = position;
             }
         });
+
+        update();
     }
 
     /**
