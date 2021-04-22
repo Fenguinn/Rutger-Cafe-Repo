@@ -54,7 +54,6 @@ public class Coffee extends MenuItem{
      * @param obj object to be added to the add-ins for Coffee
      * @return true if add-in successful, false if not.
      */
-
     public boolean add(Object obj) {
         if (obj instanceof String) {
             String AddIn = (String)obj;
@@ -92,7 +91,6 @@ public class Coffee extends MenuItem{
      * @param obj object to be added in as an add-in for the Coffee
      * @return true if add-in removed, false if not.
      */
-
     public boolean remove(Object obj) {
         if (obj instanceof String) {
             String AddIn = (String)obj;
