@@ -6,4 +6,89 @@
     android:layout_height="match_parent"
     tools:context=".OrderingCoffee">
 
+    <Button
+        android:id="@+id/AddToOrderButton"
+        android:layout_width="251dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginBottom="44dp"
+        android:text="@string/add_to_order"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/subtotal_textview"
+        android:layout_width="245dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="83dp"
+        android:layout_marginLeft="83dp"
+        android:layout_marginBottom="132dp"
+        android:text="@string/sub_total"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/milkBox"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="320dp"
+        android:text="@string/milk"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/creamBox"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="@string/cream"
+        app:layout_constraintStart_toEndOf="@+id/milkBox"
+        app:layout_constraintTop_toTopOf="@+id/milkBox" />
+
+    <CheckBox
+        android:id="@+id/syrupBox"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="@string/syrup"
+        app:layout_constraintStart_toEndOf="@+id/creamBox"
+        app:layout_constraintTop_toTopOf="@+id/creamBox" />
+
+    <CheckBox
+        android:id="@+id/caramelBox"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/caramel"
+        app:layout_constraintStart_toStartOf="@+id/milkBox"
+        app:layout_constraintTop_toBottomOf="@+id/milkBox" />
+
+    <CheckBox
+        android:id="@+id/whippedCreamBox"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/whipped_cream"
+        app:layout_constraintStart_toEndOf="@+id/caramelBox"
+        app:layout_constraintTop_toBottomOf="@+id/creamBox" />
+
+    <Spinner
+        android:id="@+id/coffeeSizeList"
+        android:layout_width="283dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginLeft="64dp"
+        android:layout_marginBottom="191dp"
+        android:entries="@array/Coffee_Sizes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
