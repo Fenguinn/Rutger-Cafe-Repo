@@ -49,7 +49,7 @@
         android:background="#00FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/shoppingCart_foreground" />
+        app:srcCompat="@mipmap/shoppingcart_foreground" />
 
     <ImageButton
         android:id="@+id/mmStoreOrderImage"
@@ -63,6 +63,6 @@
         android:scaleY=".75"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/storeOrders_foreground" />
+        app:srcCompat="@mipmap/storeorders_foreground" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
