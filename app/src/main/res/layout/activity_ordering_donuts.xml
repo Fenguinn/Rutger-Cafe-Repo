@@ -4,34 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#DF93EC"
     tools:context=".OrderingDonuts">
 
 
     <Spinner
         android:id="@+id/flavorSpinner"
-        android:layout_width="100dp"
+        android:layout_width="300"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="460dp"
+        android:layout_marginTop="386dp"
+        android:layout_marginEnd="136dp"
+        android:layout_marginRight="136dp"
         android:entries="@array/donutFlavorArray"
         android:scaleX="1"
         android:scaleY="1.5"
         android:translationX="75dp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
         android:id="@+id/numDonutSpinner"
-        android:layout_width="75dp"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="132dp"
-        android:layout_marginLeft="132dp"
-        android:layout_marginTop="460dp"
+        android:layout_marginEnd="300dp"
+        android:layout_marginRight="300dp"
+        android:layout_marginBottom="241dp"
         android:entries="@array/numDonutArray"
         android:translationX="135dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/donutAddToOrderButton"
