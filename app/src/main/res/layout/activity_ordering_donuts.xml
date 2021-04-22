@@ -7,7 +7,7 @@
     tools:context=".OrderingDonuts">
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/donutImageView"
         android:layout_width="370dp"
         android:layout_height="227dp"
         android:scaleX="1.5"
@@ -18,17 +18,17 @@
 
     <Spinner
         android:id="@+id/flavorSpinner"
-        android:layout_width="130"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:entries="@array/donutFlavorArray"
-        android:scaleX="1.5"
+        android:scaleX="1"
         android:scaleY="1.5"
         android:translationX="75"
         tools:layout_editor_absoluteX="-25dp"
         tools:layout_editor_absoluteY="504dp" />
 
     <Spinner
-        android:id="@+id/spinner3"
+        android:id="@+id/numDonutSpinner"
         android:layout_width="75"
         android:layout_height="wrap_content"
         android:entries="@array/numDonutArray"
