@@ -17,7 +17,7 @@ import java.util.List;
 
 /**
  * This activity class provides the functionality for ordering donuts.
- * This is the controller class of the "activity_ordering_donuts.xml" activity.
+ * This is the activity class of the "activity_ordering_donuts.xml" activity.
  * @author Abdullah Salem, Gent Blaku
  *
  */
@@ -49,11 +49,14 @@ public class OrderingDonuts extends AppCompatActivity {
     private Button addToListButton;
     private Button removeFromListButton;
 
+    /**
+     * This function is called automatically and initializes the elements of the activity.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ordering_donuts);
-
+        this.setTitle("Order Donuts");
         myDonuts = new ArrayList<Donut>();
         myListStrings = new ArrayList<String>();
         subtotalTextViewDonuts = (TextView) findViewById(R.id.subtotalTextViewDonuts);
@@ -73,7 +76,9 @@ public class OrderingDonuts extends AppCompatActivity {
         });
     }
 
-
+    /**
+     * This is a helper function that is called several times through out the class. It changes the page to match any changes made by the user.
+     */
     private void update() {
         myListStrings.clear();
 
@@ -91,7 +96,9 @@ public class OrderingDonuts extends AppCompatActivity {
 
         subtotalTextViewDonuts.setText(formatter.formatPrice(subtotal));
     }
-
+    /**
+     * This function takes a selected item of a specific type and flavor into the list
+     */
     public void addToList(View view) {
         int flavor = flavorPicker.getSelectedItemPosition();
         int quantity = quantityPicker.getSelectedItemPosition() + ONE;
@@ -100,7 +107,9 @@ public class OrderingDonuts extends AppCompatActivity {
         myDonuts.add(myDonut);
         update();
     }
-
+    /**
+     * This function is called when the cancel order button is clicked. It removes the selected order from the list.
+     */
     public void removeFromList(View view) {
         try {
             this.myDonuts.remove(positionBadDonut);
@@ -111,7 +120,9 @@ public class OrderingDonuts extends AppCompatActivity {
             toast.show();
         }
     }
-
+    /**
+     * This function adds donuts into the order
+     */
     public void addToOrder(View view) {
         if (myDonuts.isEmpty()) {
             int duration = Toast.LENGTH_SHORT;

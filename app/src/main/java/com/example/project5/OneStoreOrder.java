@@ -47,8 +47,6 @@ public class OneStoreOrder implements Customizable{
         }
         return false;
     }
-
-
     /**
      * This function removes an object from the list, if it is in the list.
      * @param obj is an object that is being removed from the list
@@ -56,9 +54,18 @@ public class OneStoreOrder implements Customizable{
      */
     @Override
     public boolean remove(Object obj) {
-        if (obj instanceof Order) {
-            Order order = (Order)obj;
-            this.storeOrdersList.remove(order);
+        return false;
+    }
+
+
+    /**
+     * This function removes an object from the list, if it is in the list.
+     * @param removeIndex is an object that is being removed from the list
+     * @return true if an object is removed, false if otherwise.
+     */
+    public boolean remove(int removeIndex) {
+        if (removeIndex <= storeOrdersList.size()) {
+            this.storeOrdersList.remove(removeIndex);
             return true;
         }
         return false;

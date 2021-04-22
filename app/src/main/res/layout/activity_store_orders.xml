@@ -49,9 +49,10 @@
         android:id="@+id/CancelOrderButton"
         android:layout_width="287dp"
         android:layout_height="64dp"
-        android:layout_marginStart="62dp"
-        android:layout_marginLeft="62dp"
-        android:layout_marginBottom="79dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginBottom="48dp"
+        android:onClick="cancelThisOrder"
         android:text="@string/cancel_order"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

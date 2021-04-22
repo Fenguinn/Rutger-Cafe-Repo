@@ -50,11 +50,11 @@
         android:layout_height="39dp"
         android:layout_marginStart="56dp"
         android:layout_marginLeft="56dp"
-        android:layout_marginTop="507dp"
+        android:layout_marginBottom="222dp"
         android:background="#D8D8D8"
         android:text="@string/sub_total"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/taxTextView"
@@ -62,11 +62,11 @@
         android:layout_height="39dp"
         android:layout_marginStart="56dp"
         android:layout_marginLeft="56dp"
-        android:layout_marginTop="562dp"
+        android:layout_marginBottom="168dp"
         android:background="#D8D8D8"
         android:text="@string/sales_tax"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/totalTextView"
@@ -74,20 +74,22 @@
         android:layout_height="40dp"
         android:layout_marginStart="56dp"
         android:layout_marginLeft="56dp"
-        android:layout_marginTop="610dp"
+        android:layout_marginBottom="114dp"
         android:background="#D8D8D8"
         android:text="@string/total"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/placeOrderButton"
         android:layout_width="188dp"
         android:layout_height="60dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginStart="111dp"
+        android:layout_marginLeft="111dp"
+        android:layout_marginBottom="24dp"
+        android:onClick="placeMyOrder"
         android:text="@string/place_order"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -97,6 +99,7 @@
         android:layout_marginStart="45dp"
         android:layout_marginLeft="45dp"
         android:layout_marginTop="377dp"
+        android:onClick="removeItem"
         android:text="@string/remove"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

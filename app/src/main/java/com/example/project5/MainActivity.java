@@ -9,7 +9,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
-
+/**
+ * An Activity class that provides the functionality of the Main Menu.
+ * This is the activity class of the "activity_main.xml" Window.
+ * @author Abdullah Salem, Gent Blaku
+ *
+ */
 public class MainActivity extends AppCompatActivity {
 
     public static Order myOrder = new Order();
@@ -24,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        this.setTitle("Main Menu");
         donutImageButton = (ImageButton) findViewById(R.id.mmDonutImage);
         donutImageButton.setOnClickListener(new View.OnClickListener() {
             @Override

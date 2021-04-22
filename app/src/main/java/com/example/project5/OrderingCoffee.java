@@ -10,7 +10,12 @@ import android.widget.CheckBox;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-
+/**
+ * An Activity class that provides the functionality to manage ordering coffee
+ * This is the activity class of the "activity_ordering_coffee.xml" Window.
+ * @author Abdullah Salem, Gent Blaku
+ *
+ */
 public class OrderingCoffee extends AppCompatActivity {
     public final static int ONE = 1;
     public final static int TWO = 2;
@@ -33,7 +38,7 @@ public class OrderingCoffee extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ordering_coffee);
-
+        this.setTitle("Order Coffee");
         myCoffee = new Coffee();
 
         milk = (CheckBox)findViewById(R.id.milkBox);
