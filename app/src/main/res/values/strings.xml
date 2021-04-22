@@ -7,13 +7,14 @@
     <string name="syrup">Syrup</string>
     <string name="caramel">Caramel</string>
     <string name="whipped_cream">Whipped Cream</string>
+    <string name="CoffeePictureDescription">A picture of steaming hot coffee and aesthetically placed grounds</string>
 
 
     <string-array name="Coffee_Sizes">
-        <string name="short">Short</string>
-        <string name="tall">Tall</string>
-        <string name="grande">Grande</string>
-        <string name="venti">Venti</string>
+        <item>Short</item>
+        <item>Tall</item>
+        <item>Grande</item>
+        <item>Venti</item>
     </string-array>
 
     <string-array name="donutFlavorArray">
