@@ -16,6 +16,9 @@
     <string name="sales_tax">Sales Tax</string>
     <string name="order_details">Order Details</string>
     <string name="remove">Remove</string>
+    <string name="arrow_right"><![CDATA[->]]></string>
+    <string name="arrow_left"><![CDATA[<-]]></string>
+    <string name="Donut_description">Some donuts</string>
 
 
     <string-array name="Coffee_Sizes">
@@ -26,15 +29,17 @@
     </string-array>
 
     <string-array name="donutFlavorArray">
-        <item>Jelly</item>
-        <item>Banana Swirl</item>
-        <item>Glazed</item>
-        <item>Boston Kreme</item>
-        <item>Strawberry Glaze</item>
-        <item>Choco Loco</item>
-        <item>Blueberry Cake</item>
-        <item>Lemon Deliciousness</item>
+        <item>JELLY FILLED</item>
+        <item>BOSTON KREME</item>
+        <item>STRAWBERRY LEMON SWIRL</item>
+        <item>MAPLE FROSTED</item>
+        <item>BLUEBERRY CAKE</item>
+        <item>ICECREAM CAKE</item>
+        <item>CHOCOLOCO</item>
+        <item>GLAZED</item>
+        <item>BERRY BEAUTIFUL</item>
     </string-array>
+
 
     <string-array name="numDonutArray">
         <item>1</item>

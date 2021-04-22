@@ -12,6 +12,9 @@ import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static Order myOrder = new Order();
+    public static OneStoreOrder myStore = new OneStoreOrder();
+
     ImageButton donutImageButton;
     ImageButton coffeeImageButton;
     ImageButton orderDetailsImageButton;
