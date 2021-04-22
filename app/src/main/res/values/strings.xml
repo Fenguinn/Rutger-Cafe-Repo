@@ -36,7 +36,7 @@
         <item>Lemon Deliciousness</item>
     </string-array>
 
-    <integer-array name="numDonutArray">
+    <string-array name="numDonutArray">
         <item>1</item>
         <item>2</item>
         <item>3</item>
@@ -49,5 +49,5 @@
         <item>10</item>
         <item>11</item>
         <item>12</item>
-    </integer-array>
+    </string-array>
 </resources>

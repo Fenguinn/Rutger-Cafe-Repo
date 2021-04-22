@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#00BCD4"
     tools:context=".OrderingDonuts">
+
 
     <Spinner
         android:id="@+id/flavorSpinner"
