@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -14,6 +15,12 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This activity class provides the functionality for ordering donuts.
+ * This is the controller class of the "activity_ordering_donuts.xml" activity.
+ * @author Abdullah Salem, Gent Blaku
+ *
+ */
 public class OrderingDonuts extends AppCompatActivity {
 
     public final static int ZERO = 0;
@@ -33,7 +40,8 @@ public class OrderingDonuts extends AppCompatActivity {
     private ArrayList<Donut> myDonuts;
     private ArrayList<String> myListStrings;
     private TextView subtotalTextViewDonuts;
-    ArrayAdapter<String> arrayAdapter;
+    private ArrayAdapter<String> arrayAdapter;
+    private int positionBadDonut;
 
     private Spinner flavorPicker;
     private Spinner quantityPicker;
@@ -55,6 +63,14 @@ public class OrderingDonuts extends AppCompatActivity {
 
         arrayAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, myListStrings );
         donutList_ListView.setAdapter(arrayAdapter);
+
+
+        donutList_ListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapter, View v, int position, long arg3) {
+                positionBadDonut = position;
+            }
+        });
     }
 
 
@@ -86,18 +102,34 @@ public class OrderingDonuts extends AppCompatActivity {
     }
 
     public void removeFromList(View view) {
-//        try {
-//            int badDonut = donutList_ListView.getSelectedItemPosition();
-//            this.myDonuts.remove(badDonut);
-//            this.update();
-//        } catch (Exception e) {
-//            int duration = Toast.LENGTH_SHORT;
-//            Toast toast = Toast.makeText(this, "Please select something to remove" , duration);
-//            toast.show();
-//        }
+        try {
+            this.myDonuts.remove(positionBadDonut);
+            this.update();
+        } catch (Exception e) {
+            int duration = Toast.LENGTH_SHORT;
+            Toast toast = Toast.makeText(this, "Please select something to remove" , duration);
+            toast.show();
+        }
     }
 
+    public void addToOrder(View view) {
+        if (myDonuts.isEmpty()) {
+            int duration = Toast.LENGTH_SHORT;
+            Toast toast = Toast.makeText(this, "Please pick a donut!" , duration);
+            toast.show();
+            return;
+        }
+
+        int duration = Toast.LENGTH_SHORT;
+        Toast toast = Toast.makeText(this, "Donut(s) have been added to Order" , duration);
+        toast.show();
 
 
 
+        for (int x = 0; x < this.myDonuts.size(); x++) {
+            MainActivity.myOrder.add(this.myDonuts.get(x));
+        }
+        this.myDonuts = new ArrayList<Donut>();
+        this.update();
+    }
 }
