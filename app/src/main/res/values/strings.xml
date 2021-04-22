@@ -14,6 +14,7 @@
         <string name="tall">Tall</string>
         <string name="grande">Grande</string>
         <string name="venti">Venti</string>
+    </string-array>
 
     <string-array name="donutFlavorArray">
         <item>Jelly</item>
