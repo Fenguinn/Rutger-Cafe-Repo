@@ -7,13 +7,29 @@
     tools:context=".MainActivity">
 
     <ImageButton
-        android:id="@+id/mmDonutImage"
-        android:layout_width="246dp"
-        android:layout_height="217dp"
+        android:id="@+id/mmCoffeeImage"
+        android:layout_width="257dp"
+        android:layout_height="102dp"
         android:layout_marginStart="82dp"
         android:layout_marginLeft="82dp"
-        android:layout_marginTop="40dp"
-        android:background="#00FFFFFF"
+        android:layout_marginTop="376dp"
+        android:background="#00B32424"
+        android:scaleX="2.5"
+        android:scaleY="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/mmcoffee_foreground" />
+
+    <ImageButton
+        android:id="@+id/mmDonutImage"
+        android:layout_width="243dp"
+        android:layout_height="105dp"
+        android:layout_marginStart="82dp"
+        android:layout_marginLeft="82dp"
+        android:layout_marginTop="112dp"
+        android:background="#00B117DC"
         android:scaleX="2.4"
         android:scaleY="2"
         android:translationX="3.5dp"
@@ -24,29 +40,13 @@
         app:srcCompat="@mipmap/pinkdonuts_foreground" />
 
     <ImageButton
-        android:id="@+id/mmCoffeeImage"
-        android:layout_width="251dp"
-        android:layout_height="219dp"
-        android:layout_marginStart="82dp"
-        android:layout_marginLeft="82dp"
-        android:layout_marginTop="296dp"
-        android:background="#00FFFFFF"
-        android:scaleX="2.5"
-        android:scaleY="2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/mmcoffee_foreground" />
-
-    <ImageButton
         android:id="@+id/mmOrderImage"
         android:layout_width="118dp"
         android:layout_height="100dp"
         android:layout_marginStart="82dp"
         android:layout_marginLeft="82dp"
         android:layout_marginTop="573dp"
-        android:background="#00FFFFFF"
+        android:background="#0061D618"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/shoppingcart_foreground" />
@@ -58,7 +58,7 @@
         android:layout_marginStart="215dp"
         android:layout_marginLeft="215dp"
         android:layout_marginTop="573dp"
-        android:background="#00FFFFFF"
+        android:background="#00F8B50B"
         android:scaleX=".75"
         android:scaleY=".75"
         app:layout_constraintStart_toStartOf="parent"
