@@ -8,6 +8,9 @@
     <string name="caramel">Caramel</string>
     <string name="whipped_cream">Whipped Cream</string>
     <string name="CoffeePictureDescription">A picture of steaming hot coffee and aesthetically placed grounds</string>
+    <string name="StoreOrdersDescription">A simple drawing of a shopping cart and list</string>
+    <string name="store_orders">Store Orders</string>
+    <string name="cancel_order">Cancel Order</string>
     <string name="place_order">Place Order</string>
     <string name="total">Total</string>
     <string name="sales_tax">Sales Tax</string>
