@@ -22,37 +22,58 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/orderDonutImage" />
+        app:srcCompat="@mipmap/manydonuts" />
 
     <Spinner
         android:id="@+id/flavorSpinner"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="460dp"
         android:entries="@array/donutFlavorArray"
         android:scaleX="1"
         android:scaleY="1.5"
         android:translationX="75"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="1dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
         android:id="@+id/numDonutSpinner"
         android:layout_width="75"
         android:layout_height="wrap_content"
-        android:layout_marginStart="176dp"
-        android:layout_marginLeft="176dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginLeft="132dp"
+        android:layout_marginTop="460dp"
         android:entries="@array/numDonutArray"
         android:translationX="135"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="460dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/donutAddToOrderButton"
         android:layout_width="195dp"
         android:layout_height="57dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginLeft="108dp"
+        android:layout_marginTop="636dp"
         android:text="@string/add_to_order"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="637dp" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/subtotalTextViewDonuts"
+        android:layout_width="162dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="125dp"
+        android:layout_marginLeft="125dp"
+        android:layout_marginTop="556dp"
+        android:background="#D8D8D8"
+        android:text="@string/sub_total"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

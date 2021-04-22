@@ -6,4 +6,98 @@
     android:layout_height="match_parent"
     tools:context=".OrderDetails">
 
+    <ListView
+        android:id="@+id/orderListView"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginLeft="43dp"
+        android:layout_marginTop="207dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="31dp"
+        android:text="@string/order_details"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="#673AB7"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="283dp"
+        android:layout_marginLeft="283dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/shoppingCart_foreground" />
+
+    <TextView
+        android:id="@+id/subtotalTextView"
+        android:layout_width="261dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="507dp"
+        android:background="#D8D8D8"
+        android:text="@string/sub_total"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/taxTextView"
+        android:layout_width="261dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="562dp"
+        android:background="#D8D8D8"
+        android:text="@string/sales_tax"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/totalTextView"
+        android:layout_width="261dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="610dp"
+        android:background="#D8D8D8"
+        android:text="@string/total"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/placeOrderButton"
+        android:layout_width="188dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="4dp"
+        android:text="@string/place_order"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/removeItemButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="377dp"
+        android:text="@string/remove"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
