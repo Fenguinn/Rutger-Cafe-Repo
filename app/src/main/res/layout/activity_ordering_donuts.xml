@@ -7,23 +7,6 @@
     android:background="#00BCD4"
     tools:context=".OrderingDonuts">
 
-    <ImageView
-        android:id="@+id/donutImageView"
-        android:layout_width="370dp"
-        android:layout_height="227dp"
-        android:layout_marginStart="21dp"
-        android:layout_marginLeft="21dp"
-        android:layout_marginTop="68dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="436dp"
-        android:scaleX="1.5"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/manydonuts" />
-
     <Spinner
         android:id="@+id/flavorSpinner"
         android:layout_width="100dp"
@@ -34,19 +17,19 @@
         android:entries="@array/donutFlavorArray"
         android:scaleX="1"
         android:scaleY="1.5"
-        android:translationX="75"
+        android:translationX="75dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
         android:id="@+id/numDonutSpinner"
-        android:layout_width="75"
+        android:layout_width="75dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="132dp"
         android:layout_marginLeft="132dp"
         android:layout_marginTop="460dp"
         android:entries="@array/numDonutArray"
-        android:translationX="135"
+        android:translationX="135dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -76,4 +59,17 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="392dp"
+        android:layout_height="262dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="72dp"
+        android:scaleX="1.3"
+        android:scaleY="1.3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/manydonuts_foreground" />
 </androidx.constraintlayout.widget.ConstraintLayout>
